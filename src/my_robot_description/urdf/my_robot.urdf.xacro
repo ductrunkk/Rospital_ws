@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="Robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00482372846281469 -0.000196279137492443 0.120096327441034"
+        rpy="0 0 0" />
+      <mass
+        value="29.884356679532" />
+      <inertia
+        ixx="0.994797476444856"
+        ixy="-0.000270123877535522"
+        ixz="0.0305342555958383"
+        iyy="1.06315720070689"
+        iyz="-0.000292359115332781"
+        izz="1.79161749031822" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leftwheel_Link">
+    <inertial>
+      <origin
+        xyz="1.0842021724855E-19 -0.0250000000000001 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.904201334084009" />
+      <inertia
+        ixx="0.00157617026567942"
+        ixy="3.09487241932516E-20"
+        ixz="1.42161549186555E-36"
+        iyy="0.00281216754782375"
+        iyz="8.83651140684344E-37"
+        izz="0.00157617026567942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/leftwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/leftwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftwheel"
+    type="continuous">
+    <origin
+      xyz="-0.000130074178891328 0.307950941583285 0.0350783930876141"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="leftwheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rightwheel_Link">
+    <inertial>
+      <origin
+        xyz="-4.03323208164608E-16 0.025 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.904201334084009" />
+      <inertia
+        ixx="0.00157617026567942"
+        ixy="8.36117893313694E-21"
+        ixz="1.42161549186555E-36"
+        iyy="0.00281216754782375"
+        iyz="8.83651140684344E-37"
+        izz="0.00157617026567942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/rightwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/rightwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwheel"
+    type="continuous">
+    <origin
+      xyz="-0.000701363017151951 -0.307950941583284 0.0350783930876141"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rightwheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="supportwheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.000150946084529785 -0.00139961578214384 -0.000123365574044413"
+        rpy="0 0 0" />
+      <mass
+        value="0.0131459852654848" />
+      <inertia
+        ixx="1.25638910116563E-06"
+        ixy="-1.33300952333478E-21"
+        ixz="2.61285921313983E-11"
+        iyy="1.72721590010522E-06"
+        iyz="-2.07531498370768E-24"
+        izz="1.256378485512E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/supportwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_robot_description/meshes/supportwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="spwheel"
+    type="continuous">
+    <origin
+      xyz="-0.17967207586264 0.00100382181363834 -0.0280371509275584"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="supportwheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <link name = "base_footprint"/>
+
+  <joint name = "base_footprint_joint" type = "fixed">
+      <parent link = "base_footprint"/>
+      <child link = "base_link"/>
+      <origin xyz = "0 0 0.045" rpy = "0 0 0"/>
+  </joint>
+</robot>
