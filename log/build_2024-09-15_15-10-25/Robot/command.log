@@ -1,2 +1,0 @@
-Invoking command in '/home/ductrung/ros2_ws/build/Robot': /usr/bin/cmake /home/ductrung/ros2_ws/src/Robot URDF -DCMAKE_INSTALL_PREFIX=/home/ductrung/ros2_ws/install/Robot
-Invoked command in '/home/ductrung/ros2_ws/build/Robot' returned '1': /usr/bin/cmake /home/ductrung/ros2_ws/src/Robot URDF -DCMAKE_INSTALL_PREFIX=/home/ductrung/ros2_ws/install/Robot
